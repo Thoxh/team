@@ -29,6 +29,6 @@ Durch den Befehl `nano ~/.zshrc` eine neue PATH-Datei anlegen, sofern nicht bere
 ![Ordnerpfad herausfinden](images/introduction_2.png)
 
 4. **PATH speichern** — 
-`Control + X` zum Speichern, `Y` zum bestätigen und `Enter` zum finalen Speichern.
+Weiterhin in der neuen Datei: `Control + X` zum Speichern, `Y` zum bestätigen und `Enter` zum finalen Speichern.
 
 5. **Überprüfen** — Terminal neustarten (schließen und wieder öffnen) und durch `flutter --version` überprüfen ob die Installation erfolgreich war.
