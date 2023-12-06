@@ -1,67 +1,72 @@
 # Installationsguide — Flutter
-## Windows
+
+> Folgend finden Sie eine vereinfachte Anleitung zur Installation von Flutter. Dies ist ein Ausschnitt aus der [offizielen Dokumentation](https://docs.flutter.dev/get-started/install) zur Installation von Flutter.
+
+## Voraussetzung: Visual Studio Code installieren
+> Bitte installieren Sie neben Flutter ebenfalls [Visual Studio Code](https://code.visualstudio.com) und die notwendige [Flutter Extension](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter).
+
+
+## Für Windows-Nutzer
+
 ### 1. Download Flutter SDK
-> [Download](https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.16.2-stable.zip)
+Das Flutter SDK ist das Herzstück für die Entwicklung von Apps für zahlreiche Plattformen und das Web. Laden Sie es von [hier](https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.16.2-stable.zip) herunter.
 
 ### 2. Datei entpacken und verschieben
-> Entpacke das geladene .zip-Verzeichnis und verschiebe den Ordner an einen geeigneten Ort. Ich habe es zum Beispiel unter folgendem Pfad: `D:\flutter\bin`
+Nach dem Herunterladen finden Sie eine `.zip`-Datei. Rechtsklicken Sie darauf und wählen Sie 'Alle extrahieren', um den Inhalt zu entpacken. Verschieben Sie dann den `flutter`-Ordner an einen Speicherort Ihrer Wahl, zum Beispiel `D:\flutter\bin`.
 
-*Der Pfad sollte keine speziellen Zeichen oder Leerzeichen beinhalten. Außerdem sollte der Ordner nicht direkt in C:\Program Files\ gelegt werden.*
+> *Hinweis: Vermeiden Sie spezielle Zeichen oder Leerzeichen im Pfad und legen Sie den Ordner nicht direkt in `C:\Program Files\` ab.*
 
 ### 3. Flutter zum PATH hinzufügen
-> Der Flutterordner muss zu den Umgebungsvariablen von Windows hinzugefügt werden, um global Zugriff auf den Konsolenbefehl `flutter` zu bekommen. 
+Damit Sie die Flutter-Befehle in der Kommandozeile (CMD) global nutzen können, fügen Sie den Pfad zum `flutter\bin`-Ordner zu Ihren Umgebungsvariablen hinzu.
 
 1. **Pfad kopieren** —
-Gehe in den eben verschobenen Flutterordner und navigiere in den enthaltenen `\bin` Ordner. Kopiere nun den Pfad zu diesem Ordner.\
-\
-![Ordnerpfad herausfinden](images/introduction_3.png)
+   Navigieren Sie zum eben verschobenen `flutter`-Ordner und gehen sie weiterhin in den enthaltenen `\bin`-Ordner und kopieren Sie den Pfad.
+   ![Pfad kopieren](images/introduction_3.png)
 
 2. **Zu Umgebungsvariablen navigieren** —
-Navigiere durch die Windows-Suchbar zu `Umgebungsvariablen für dieses Konto bearbeiten`\
-\
-![Ordnerpfad herausfinden](images/introduction_4.png)
+   Über die Windows-Suchleiste zu 'Umgebungsvariablen für dieses Konto bearbeiten'.
+   ![Umgebungsvariablen](images/introduction_4.png)
 
 3. **Pfad zu den Umgebungsvariablen hinzufügen** —
-Wähle nun `Path` aus oder erstelle diese Variable, sofern sie nicht bereits vorhanden ist. Bearbeite den Wert der Variable durch den Button `Bearbeiten...`. \
-\
-![Ordnerpfad herausfinden](images/introduction_5.png)
-Erstelle einen neuen Wert durch den Button `Neu` und setze den eben kopierten Pfad von deinem `...\flutter\bin` Ordner ein. Klicke anschließend `OK`\
-\
-![Ordnerpfad herausfinden](images/introduction_6.png)
+   Fügen Sie den kopierten Pfad zu den Umgebungsvariablen hinzu wie in den folgenden Abbildungen gezeigt. Sofern die `Path`-Variable nicht bereits existiert, erstellen Sie diese.
+   ![Pfad hinzufügen](images/introduction_5.png)
+   ![Bestätigen](images/introduction_6.png)
 
+4. **Überprüfen** —
+   Starten Sie die Konsole (neu) und überprüfen Sie die Installation mit `flutter --version`.
 
+> Bei Problemen wenden Sie sich bitte rechtzeitig per E-Mail an `siebertt@th-brandenburg.de`.
 
+## Für Mac-Nutzer
 
-## Mac
 ### 1. Download Flutter SDK
-> **Intel-Chips**: [Download](https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_3.16.2-stable.zip) —
- **Apple M-Chips**: [Download](https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.16.2-stable.zip)
+Wählen Sie je nach Ihrem Mac-Typ die passende Version des Flutter SDKs aus: 
+- **Intel-Chips**: [Download](https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_3.16.2-stable.zip)
+- **Apple M-Chips**: [Download](https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.16.2-stable.zip)
 
-*Download-Datei sollte sich automatisch entpacken.*
+Die Download-Datei sollte sich automatisch entpacken.
 
 ### 2. Flutter verschieben
-
-> Der Flutterordner sollte in einen eigenen Ordner verschoben werden. Ich habe es zum Beispiel unter folgendem Pfad: `/Users/timsiebert/Documents/Dev/flutter`
+Verschieben Sie den `flutter`-Ordner in einen Ordner Ihrer Wahl, wie zum Beispiel `/Users/timsiebert/Documents/Dev/flutter`.
 
 ### 3. Flutter zum PATH hinzufügen
-
-> Damit man jederzeit und global den Konsolenbefehl `flutter` ausführen kann, ist es zwingend notwending den Pfad zum Flutterordner zum **PATH** hinzuzufügen
+Um den `flutter`-Befehl jederzeit im Terminal ausführen zu können, muss der Pfad zum Flutter-Ordner zum PATH hinzugefügt werden.
 
 1. **Pfad herausfinden** — 
-Gehe in den Flutterordner mittels des Finders und drücke gleichzeitig `Command + Option + P`. Nun sollte der Pfad symbolisch im Finder angezeigt werden. Linksklicke auf das letzte Element `flutter` und wähle `"flutter" als Pfadname kopieren` aus.\
-\
-![Ordnerpfad herausfinden](images/introduction.png)
-
+   Öffnen Sie den Flutter-Ordner im Finder, drücken Sie `Command + Option + P` *(Symbolische Pfadanzeige anzeigen)* und kopieren Sie den angezeigten Pfad, wie in der Abbildung gezeigt durch einen Rechtsklick unten auf `flutter`.
+   ![Ordnerpfad herausfinden](images/introduction.png)
 
 2. **Terminal öffnen** —
-Terminal über Spotlight / Suche öffnen. Die Suchleiste lässt sich durch das Klicken auf die Linse oben, rechts auf dem Bildschirm öffnen oder durch `Command + Space`. Anschließend `Terminal`eingaben, um das Terminal zu öffnen.
+   Öffnen Sie das Terminal über Spotlight/Suche - *(`Command + Space` und nach Terminal suchen oder über die Linse in der oberen Mac-Leiste)* .
 
 3. **PATH öffnen** —
-Durch den Befehl `nano ~/.zshrc` eine neue PATH-Datei anlegen, sofern nicht bereits vorhanden. Folgendes eintragen: `export PATH=”$PATH:[PATH_TO_FLUTTER_DIRECTORY]/flutter/bin”` Der Mauszeiger funktioniert im Terminal nicht, daher mit den Pfeiltasten navigieren und Pfad ersetzen.\
-\
-![Ordnerpfad herausfinden](images/introduction_2.png)
+   Legen Sie eine neue PATH-Datei mit `nano ~/.zshrc` an, falls noch nicht vorhanden, und fügen Sie `export PATH="$PATH:[PATH_TO_FLUTTER_DIRECTORY]/flutter/bin"` ein. Hier benötigen Sie den kopierten Pfad aus Schritt 1. *(Der Mauszeiger funktioniert im Terminal nicht, daher mit den Pfeiltasten navigieren und Pfad ersetzen)* Vergleichen Sie ihre Eingabe mit dem folgenden Screenshot.
+   ![PATH bearbeiten](images/introduction_2.png)
 
 4. **PATH speichern** — 
-Weiterhin in der neuen Datei: `Control + X` zum Speichern, `Y` zum bestätigen und `Enter` zum finalen Speichern.
+   Speichern Sie die Änderungen mit `Control + X`, bestätigen Sie mit `Y` und drücken Sie `Enter`.
 
-5. **Überprüfen** — Terminal neustarten (schließen und wieder öffnen) und durch `flutter --version` überprüfen ob die Installation erfolgreich war.
+5. **Überprüfen** — 
+   Starten Sie das Terminal neu und überprüfen Sie die Installation mit `flutter --version`.
+
+> Bei Problemen wenden Sie sich bitte rechtzeitig per E-Mail an `siebertt@th-brandenburg.de`.
